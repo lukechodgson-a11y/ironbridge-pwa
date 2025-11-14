@@ -1,62 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Ironbridge River & Chester Tides</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a84ff">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
+  <title>River & Tide Levels</title>
+  <meta name="viewport" content=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>River Dee & Chester Tides</h1>
-  <p class="subtitle">Ironbridge levels · Chester tide times</p>
-</header>
+<h1>Ironbridge River Level</h1>
+<div id="riverLevel">--</div>
+<div id="riverTime">--</div>
+<div id="riverTrend">--</div>
+<canvas id="riverChart" height="140"></canvas>
 
-<main>
-  <section class="station-nav">
-    <h2>Stations</h2>
-    <div id="stationButtons" class="station-buttons">
-      <!-- buttons injected by JS -->
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>Latest River Level – <span id="stationName">Ironbridge</span></h2>
-    <div class="latest-row">
-      <div class="latest-main">
-        <div class="latest-value" id="riverLevel">-- m</div>
-        <div class="latest-status" id="riverTrend">Loading…</div>
-      </div>
-      <div class="latest-meta">
-        <div><strong>Time:</strong> <span id="riverTime">--</span></div>
-        <div><strong>Source:</strong> riverlevels.uk</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>River Level – Last 7 Days</h2>
-    <canvas id="riverChart" height="140"></canvas>
-    <div class="small" id="chartNote"></div>
-  </section>
-
-  <section class="panel">
-    <h2>Chester Tide Times</h2>
-    <p class="small">Live data via your Render proxy: tide-proxy.onrender.com</p>
-    <ul id="tideList" class="tide-list">
-      <li>Loading tide data…</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p class="small">
-    PWA demo · Add to Home Screen on your phone.
-  </p>
-</footer>
+<h2>Chester Tide Times</h2>
+<ul id="tideList"><li>Loading…</li></ul>
 
 <script src="app.js"></script>
 </body>
