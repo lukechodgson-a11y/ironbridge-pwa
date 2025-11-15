@@ -1,5 +1,5 @@
 //--------------------------------------------------
-//  CONFIG — Live endpoints through rivertide1 proxy
+//  CONFIG — Live endpoints through rivertide1 proxy 
 //--------------------------------------------------
 const TIDE_URL = "https://rivertide1.onrender.com/api/tides/chester";
 
